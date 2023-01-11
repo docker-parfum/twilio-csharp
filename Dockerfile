@@ -26,7 +26,7 @@ RUN apt-get update \
     && wget https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb \
     && dpkg -i packages-microsoft-prod.deb  \
     && apt-get update \
-    && apt-get install -y \
+    && apt-get install --no-install-recommends -y \
         dotnet-sdk-3.1 \
         dotnet-sdk-6.0 \
         mono-complete \
